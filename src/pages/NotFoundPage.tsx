@@ -1,10 +1,9 @@
 import { IonButtons, IonContent, IonHeader, IonMenuButton, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './HomePage.css';
+import './NotFoundPage.css';
 
-const HomePage: React.FC = () => {
+const NotFoundPage: React.FC = () => {
 
-  const name = "Startseite";
+  const name = "Seite nicht gefunden";
 
   return (
     <IonPage>
@@ -23,10 +22,10 @@ const HomePage: React.FC = () => {
             <IonTitle size="large">{name}</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name={name} />
+        <div className='ion-padding'>Der gesuchte Inhalt wurde nicht gefunden.</div>
       </IonContent>
     </IonPage>
   );
 };
 
-export default HomePage;
+export default NotFoundPage;

@@ -2,7 +2,8 @@ import {
   FunctionComponent
 } from 'react'
 import {
-  homeOutline, homeSharp
+  homeOutline, homeSharp,
+  bicycleOutline, bicycleSharp
 } from 'ionicons/icons';
 import HomePage from '../pages/HomePage';
 
@@ -22,6 +23,12 @@ export const appPages : AppPage[] = [
     iosIcon: homeOutline,
     mdIcon: homeSharp,
     component: HomePage
+  },
+  {
+    title: 'Touren',
+    url: '/touren',
+    iosIcon: bicycleOutline,
+    mdIcon: bicycleSharp
   },
 ];
 
