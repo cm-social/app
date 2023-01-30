@@ -24,6 +24,7 @@ const Menu: React.FC = () => {
           <IonListHeader>Kontakt</IonListHeader>
           <IonNote>{ appConfig.contact.email }</IonNote>
           {appPages.map((appPage, index) => {
+            if (appPage.hidden && appPage.hidden == true) {return <></>}
             return (
               <IonMenuToggle key={index} autoHide={false}>
                 <IonItem className={location.pathname === appPage.url ? 'selected' : ''} routerLink={appPage.url} routerDirection="none" lines="none" detail={false}>

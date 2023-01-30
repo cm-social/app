@@ -17,10 +17,11 @@ import HomePage from '../pages/HomePage';
 
 interface AppPage {
   url: string;
-  iosIcon: string;
-  mdIcon: string;
-  title: string;
-  component?: FunctionComponent
+  iosIcon?: string;
+  mdIcon?: string;
+  title?: string;
+  hidden?: boolean;
+  component?: FunctionComponent;
 }
   
   
@@ -48,7 +49,8 @@ export const appPages : AppPage[] = [
     title: 'Chat',
     url: '/chat',
     iosIcon: chatbubblesOutline,
-    mdIcon: chatbubblesSharp
+    mdIcon: chatbubblesSharp,
+    hidden: true
   },
   {
     title: 'Aktuelles',
@@ -66,7 +68,8 @@ export const appPages : AppPage[] = [
     title: 'Profil',
     url: '/profil',
     iosIcon: personCircleOutline,
-    mdIcon: personCircleSharp
+    mdIcon: personCircleSharp,
+    hidden: true
   },
   {
     title: 'Teilen',
@@ -78,7 +81,8 @@ export const appPages : AppPage[] = [
     title: 'Einstellungen',
     url: '/einstellungen',
     iosIcon: settingsOutline,
-    mdIcon: settingsSharp
+    mdIcon: settingsSharp,
+    hidden: true
   },
   {
     title: 'Impressum',
